@@ -1,5 +1,5 @@
 import openpyxl
-from funs import *
+from SQL_functions import *
 
 wbOb = openpyxl.load_workbook('pdfs/FE_AI_CAP1-converted.xlsx')
 print(wbOb.sheetnames)
