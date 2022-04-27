@@ -1,2 +1,2 @@
 openpyxl==2.6.2
-camelot==
+camelot==0.9.0
