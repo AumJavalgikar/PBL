@@ -30,7 +30,7 @@ for row in range(3, sheet.max_row + 1):
         # print(sheet.cell(column=column, row=row).value, end=' ')
 # print(sheet.max_row)
 # print(all_college_info)
-insert_into_table(all_college_info, 'ExcelTable')
+insert_into_CETtable(all_college_info, 'CETExcelTable')
 print('Successfully inserted all college info into database!')
 t2 = time.perf_counter()
 print('Finished in', t2-t1, 'seconds')

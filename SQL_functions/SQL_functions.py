@@ -6,7 +6,7 @@ def create_JEE_pdf_table():
        Creates a table to store data extracted from pdfs containing JEE Mains Cutoffs
        """
     conn = sqlite3.connect('database/cutoffdatabase.db')
-    conn.execute('''CREATE TABLE IF NOT EXISTS CETPdfTable (
+    conn.execute('''CREATE TABLE IF NOT EXISTS JEEPdfTable (
            Serial INTEGER PRIMARY KEY,
            Institute TEXT,
            AcademicProgramName TEXT,
@@ -19,6 +19,23 @@ def create_JEE_pdf_table():
     conn.commit()
     conn.close()
 
+def create_JEE_excel_table():
+    """
+    Creates a table to store data extracted from excel worksheets containing JEE Mains cutoffs
+    """
+    conn = sqlite3.connect('database/cutoffdatabase.db')
+    conn.execute('''CREATE TABLE IF NOT EXISTS JEEExcelTable (
+           Serial INTEGER PRIMARY KEY,
+           Institute TEXT,
+           AcademicProgramName TEXT,
+           Quota TEXT,
+           SeatType TEXT,
+           Gender TEXT,
+           OpeningRank INTEGER,
+           ClosingRank INTEGER
+        )''')
+    conn.commit()
+    conn.close()
 
 def create_CET_pdf_table():
     """
@@ -42,7 +59,7 @@ def create_CET_pdf_table():
 
 def create_CET_excel_table():
     """
-    Creates a table to store data extracted from excel worksheets containing JEE Mains cutoffs
+    Creates a table to store data extracted from excel worksheets containing CET AI cutoffs
     """
     conn = sqlite3.connect('database/cutoffdatabase.db')
     conn.execute('''CREATE TABLE IF NOT EXISTS CETExcelTable (
@@ -83,7 +100,7 @@ def insert_into_JEEtable(data_list, table_name):
 
     conn = sqlite3.connect('database/cutoffdatabase.db')
     conn.executemany(f'''INSERT INTO {table_name}(Institute, AcademicProgramName, Quota, SeatType, Gender, OpeningRank, ClosingRank)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
     ''', data_list)
     conn.commit()
     conn.close()
