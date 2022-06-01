@@ -3,8 +3,8 @@ import sqlite3
 
 def create_JEE_pdf_table():
     """
-       Creates a table to store data extracted from pdfs containing JEE Mains Cutoffs
-       """
+    Creates a table to store data extracted from pdfs containing JEE Mains Cutoffs
+    """
     conn = sqlite3.connect('database/cutoffdatabase.db')
     conn.execute('''CREATE TABLE IF NOT EXISTS JEEPdfTable (
            Serial INTEGER PRIMARY KEY,
