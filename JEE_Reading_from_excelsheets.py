@@ -4,7 +4,6 @@ import time
 
 t1 = time.perf_counter()
 wbOb = openpyxl.load_workbook('excelsheets/JEE Main Cut offs-converted.xlsx')
-# print(wbOb.sheetnames)
 sheet = wbOb['Table 1']
 all_college_info = []
 for row in range(3, sheet.max_row + 1):
@@ -23,6 +22,4 @@ for row in range(3, sheet.max_row + 1):
 
     print(f'Finished row {row} out of {sheet.max_row}')
     all_college_info.append(tuple(college_info))
-# for college in all_college_info:
-#     print(college)
 insert_into_JEEtable(all_college_info, 'JEEExcelTable')
