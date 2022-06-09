@@ -6,7 +6,6 @@ import time
 t1 = time.perf_counter()
 tables = camelot.read_pdf('pdfs/FE_AI_CAP1.pdf', pages='all')
 
-count = 0
 college_list = []
 
 print('Successfully connected to FE_AI_CAP1.pdf!')

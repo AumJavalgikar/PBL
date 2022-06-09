@@ -85,7 +85,8 @@ def insert_into_CETtable(data_list, table_name):
     """
 
     conn = sqlite3.connect('database/cutoffdatabase.db')
-    conn.executemany(f'''INSERT INTO {table_name}(CutOffMerit, CutOffScore , ChoiceCode , Institute , CourseName , Exam , Type , SeatType)
+    conn.executemany(f'''INSERT INTO {table_name}(CutOffMerit, CutOffScore , 
+    ChoiceCode , Institute , CourseName , Exam , Type , SeatType)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ''', data_list)
     conn.commit()
