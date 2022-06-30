@@ -1,4 +1,4 @@
-# This script reads CET cutoff from Excel worksheets and inserts that data into sqlite database
+# This script reads CET cutoff from Excel worksheets and inserts that data into sqlite database.
 
 import openpyxl
 from SQL_functions import *
