@@ -1,3 +1,5 @@
+# This script reads CET cutoff from PDF format and inserts data into sqlite database.
+
 import camelot
 from SQL_functions import *
 import time
