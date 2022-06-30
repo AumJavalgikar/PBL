@@ -1,3 +1,5 @@
+# This script extracts JEE cutoff from Excel worksheet and inserts data into sqlite database.
+
 import openpyxl
 from SQL_functions import *
 import time
