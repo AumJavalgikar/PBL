@@ -1,3 +1,4 @@
+# This script is only for SQL query testing
 from SQL_functions import *
 
 # create_CET_pdf_table()
