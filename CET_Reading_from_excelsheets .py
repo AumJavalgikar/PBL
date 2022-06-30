@@ -4,10 +4,10 @@ import time
 
 
 t1 = time.perf_counter()
-wbOb = openpyxl.load_workbook('excelsheets/FE_AI_CAP1-converted.xlsx')
+wbOb = openpyxl.load_workbook('excelsheets/FE_AI_CAP1.xlsx')
 sheet = wbOb['Table 1']
 all_college_info = []
-print('Successfully accessed Table in worksheet \'FE_AI_CAP1-converted.xlsx\'!')
+print('Successfully accessed Table in worksheet \'FE_AI_CAP1.xlsx\'!')
 for row in range(3, sheet.max_row + 1):
     college_info = []
     for column in range(2, 9):

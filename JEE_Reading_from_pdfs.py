@@ -30,3 +30,6 @@ for table_num in range(tables.__len__()):
     print(f'Finished Table {table_num+1} out of {tables.__len__()}', flush=True)
 
 insert_into_JEEtable(all_college_info, 'JEEPdfTable')
+print('Successfully inserted all college info into database!')
+t2 = time.perf_counter()
+print('Finished in', t2-t1, 'seconds')
