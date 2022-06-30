@@ -1,5 +1,5 @@
 # PBL
-Sinhgad Institute Technology, Lonavala
+Sinhgad Institute of Technology, Lonavala
 
 Project Based Learning Report for FE year 2021-22
 
